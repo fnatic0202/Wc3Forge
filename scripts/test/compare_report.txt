@@ -1,0 +1,13 @@
+WC3 地图对比分析报告
+============================================================
+
+hello_rpg: /home/nx/rpg/sample_map/hello_rpg.w3x
+BootyBay:  /mnt/e/Warcraft III Frozen Throne/Warcraft III Frozen Throne/Maps/(2)BootyBay.w3m
+
+文件大小: hello=22779, bay=125180
+
+头部差异:
+  版本: hello=0, bay=0
+  地图ID: hello=0x149C0000, bay=0x746F6F42
+  MPQ偏移: hello=512, bay=131072
+  MPQ位置: hello=0x200, bay=0x200
