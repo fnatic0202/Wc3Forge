@@ -1,0 +1,76 @@
+// Hello RPG - 触发器数据
+// 此文件定义触发器的元数据（在 World Editor 中使用）
+
+//============================================================================
+// 单位类型定义
+//============================================================================
+
+// 英雄
+'H001'  [Hero]  "Hero"  "Human"  "A0AB"  "AHpx"  "hpea"  "hero"
+
+// 敌人
+'u000'  "Enemy"  "Creep"  "uaco"  "uaod"  "uaco"  "u000"
+'u001'  "Strong Enemy"  "Creep"  "uaco"  "uaod"  "uaco"  "u001"
+
+// 建筑/物体
+'n001'  "Spawner"  "Neutral"  "nmg2"  "nmg1"  "nmg2"  "n000"
+'n002'  "Treasure Chest"  "Neutral"  "nchg"  "nchg"  "nchg"  "n001"
+
+//============================================================================
+// 技能定义
+//============================================================================
+
+// 火焰冲击
+'A000'  "Fireblast"  "ANrf"  "fire"  "Ahrf"  "AHfs"
+
+// 冰霜新星
+'A001'  "Frost Nova"  "ANfr"  "ice "  "ahfr"  "AHtb"
+
+// 治疗
+'A002'  "Heal"  "ANhe"  "holy"  "Aheal"  "AHhb"
+
+//============================================================================
+// 物品定义
+//============================================================================
+
+// 金币
+'I001'  "Gold"  "gold"  "I000"  "gld1"  "gold"  50  0
+
+// 药水
+'I002'  "Health Potion"  "phlt"  "I001"  "phea"  "hero"  200  0
+
+//============================================================================
+// 科技定义
+//============================================================================
+
+// 升级
+'R001'  "Hero Experience"  "hero"  "Rhpx"
+
+//============================================================================
+// 触发器列表
+//============================================================================
+
+// Trigger: Game_Start
+// Events: Map initialization
+// Conditions: (None)
+// Actions: Initialize game
+
+// Trigger: Hero_Death
+// Events: Unit - A unit dies
+// Conditions: (Dying unit) == Hero
+// Actions: Handle death, respawn
+
+// Trigger: Chest_Trigger
+// Events: Unit - A unit enters (Region - Chest Area)
+// Conditions: (Triggering unit) == Hero
+// Actions: Open chest, give rewards
+
+// Trigger: Spawn_Wave
+// Events: Time - Every 30 seconds
+// Conditions: No enemies remaining
+// Actions: Spawn new wave
+
+// Trigger: Timer
+// Events: Time - Every 1 second
+// Conditions: (None)
+// Actions: Update game time
